@@ -1,0 +1,30 @@
+name:           chapter6
+version:        0.1
+cabal-version:  >=1.2
+build-type:     Simple
+author:         niket
+
+library
+  hs-source-dirs:  src
+  build-depends:   
+                   base >= 4,
+                   lens >= 4.1.2.1 && < 4.2,
+                   containers >=0.5.0 && <0.6,
+                   data-default >=0.5.3 && <0.6
+  ghc-options:     -Wall -fno-warn-type-defaults
+  exposed-modules: 
+                   Chapter6.Lenses,
+                   Chapter6.Kmeans
+
+executable chapter6
+  hs-source-dirs:  src
+  main-is:         Main.hs
+  build-depends:   
+                   base >= 4,
+                   containers >=0.5.0 && <0.6,
+                   data-default >=0.5.3 && <0.6
+  ghc-options:     -Wall -fno-warn-type-defaults
+  other-modules:   
+                   Chapter6.Lenses,
+                   Chapter6.Kmeans
+
